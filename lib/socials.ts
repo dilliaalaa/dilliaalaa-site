@@ -44,3 +44,4 @@ export const socials = [
 ] as const;
 
 export const primaryInstagram = socials[0];
+export const youtubeChannel = socials[2];

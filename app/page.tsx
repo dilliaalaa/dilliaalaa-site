@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SocialGrid } from "@/components/social-grid";
-import { primaryInstagram } from "@/lib/socials";
+import { primaryInstagram, youtubeChannel } from "@/lib/socials";
 
 export default function Home() {
   return (
@@ -85,7 +86,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+      <section className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8">
+        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-accent">
+              YouTube
+            </p>
+            <h2 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
+              The channel
+            </h2>
+          </div>
+          <a
+            href={youtubeChannel.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-accent hover:underline"
+          >
+            youtube.com/@dilliaalaa ↗
+          </a>
+        </div>
+        <a
+          href={youtubeChannel.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block overflow-hidden rounded-2xl border border-line transition-opacity hover:opacity-90"
+        >
+          <Image
+            src="/banner-wide.jpg"
+            alt="Dilli Aalaa YouTube banner"
+            width={2560}
+            height={423}
+            className="h-auto w-full"
+          />
+        </a>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8 sm:pb-20">
         <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-accent">
