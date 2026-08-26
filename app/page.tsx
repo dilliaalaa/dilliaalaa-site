@@ -1,69 +1,124 @@
-import Image from "next/image";
+import Link from "next/link";
+import { SocialGrid } from "@/components/social-grid";
+import { primaryInstagram } from "@/lib/socials";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div>
+      <section className="mx-auto w-full max-w-6xl px-5 pt-10 pb-16 sm:px-8 sm:pt-14 sm:pb-20">
+        <p className="font-hindi text-xl font-semibold text-accent sm:text-2xl">
+          दिल्ली आला
+        </p>
+        <h1 className="mt-2 font-display text-[clamp(4.75rem,18vw,11.5rem)] leading-[0.78] tracking-wide text-foreground">
+          DILLI
+          <br />
+          AALAA
+        </h1>
+        <div className="mt-8 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div>
+            <p className="text-sm uppercase tracking-[0.22em] text-muted">
+              Jaspreet Singh · Comedian · Writer
+            </p>
+            <p className="mt-4 max-w-xl text-lg leading-8 text-foreground/90 sm:text-xl">
+              Comedy that talks the way Delhi talks. Observational, a little
+              unhinged, and usually about something you were already thinking.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 lg:justify-end">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href={primaryInstagram.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-ink transition-opacity hover:opacity-90"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Watch on Instagram
+            </a>
+            <Link
+              href="/contact"
+              className="rounded-full border border-line px-6 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
             >
-              Learning
-            </a>{" "}
-            center.
+              Book / collab
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-line bg-card/40">
+        <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-3">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-accent">
+              01
+            </p>
+            <h2 className="mt-2 font-display text-3xl tracking-wide">
+              The bit
+            </h2>
+            <p className="mt-3 leading-7 text-muted">
+              Metro chaos, exam season, student life, and the odd truth bomb.
+              Jaspreet writes like a friend ranting in a room — then the
+              punchline lands.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-accent">
+              02
+            </p>
+            <h2 className="mt-2 font-display text-3xl tracking-wide">
+              The city
+            </h2>
+            <p className="mt-3 leading-7 text-muted">
+              Straight, sarcastic, very Delhi. The jokes travel because the
+              situations do — from Shahdara to the group chat.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-accent">
+              03
+            </p>
+            <h2 className="mt-2 font-display text-3xl tracking-wide">
+              The work
+            </h2>
+            <p className="mt-3 leading-7 text-muted">
+              Reels, long-form, and writing across Instagram, YouTube, and
+              wherever the next joke wants to live.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-accent">
+              Follow
+            </p>
+            <h2 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
+              Catch him here
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm leading-6 text-muted">
+            Same person, a few stages. Main Instagram first. Unlimited, YouTube,
+            X, Facebook, and Snapchat if you want the rest.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <SocialGrid />
+      </section>
+
+      <section className="bg-accent text-accent-ink">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+          <div>
+            <p className="font-hindi text-lg font-semibold">बात करो</p>
+            <h2 className="font-display text-4xl tracking-wide sm:text-5xl">
+              Brands, shows, press
+            </h2>
+          </div>
+          <Link
+            href="/contact"
+            className="rounded-full bg-accent-ink px-6 py-3 text-center text-sm font-semibold text-accent transition-opacity hover:opacity-90"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Get in touch
+          </Link>
         </div>
-      </main>
+      </section>
     </div>
   );
 }
