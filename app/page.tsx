@@ -18,10 +18,10 @@ export default function Home() {
         <div className="mt-8 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div>
             <p className="text-sm uppercase tracking-[0.22em] text-muted">
-              Jaspreet Singh · Comedian · Writer
+              Jaspreet Singh · Comedian · Content creator
             </p>
             <p className="mt-4 max-w-xl text-lg leading-8 text-foreground/90 sm:text-xl">
-              Comedy that talks the way Delhi talks. Observational, a little
+              A comedian who talks the way Delhi talks. Observational, a little
               unhinged, and usually about something you were already thinking.
             </p>
           </div>
@@ -55,8 +55,8 @@ export default function Home() {
             </h2>
             <p className="mt-3 leading-7 text-muted">
               Metro chaos, exam season, student life, and the odd truth bomb.
-              Jaspreet writes like a friend ranting in a room — then the
-              punchline lands.
+              He talks like a friend ranting in a room — then the punchline
+              lands.
             </p>
           </div>
           <div>

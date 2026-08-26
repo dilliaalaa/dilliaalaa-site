@@ -13,7 +13,7 @@ export default function ContactPage() {
         CONTACT
       </h1>
       <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-        Collabs, bookings, and press — write here.
+        For collabs, bookings, and press.
       </p>
       <a
         href="mailto:work@dilliaalaa.com"

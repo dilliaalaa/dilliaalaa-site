@@ -13,7 +13,7 @@ export function SiteFooter() {
               DILLI AALAA
             </p>
             <p className="mt-0.5 text-sm text-muted">
-              Jaspreet Singh · Comedy from Delhi
+              Jaspreet Singh · Comedian from Delhi
             </p>
           </div>
         </div>
